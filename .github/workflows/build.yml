@@ -68,7 +68,7 @@ jobs:
           CXX=g++-10 >> $GITHUB_ENV
       - name: Add msbuild to PATH
         if: matrix.os == 'windows-2019'
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2
       - name: Install meson, SDL, etc.
         if: matrix.os == 'ubuntu-22.04'
         run: |
@@ -128,7 +128,7 @@ jobs:
           CXX=g++-10 >> $GITHUB_ENV
       - name: Add msbuild to PATH
         if: matrix.os == 'windows-2019'
-        uses: microsoft/setup-msbuild@v1
+        uses: microsoft/setup-msbuild@v2
       - name: Install meson, SDL, etc.
         if: matrix.os == 'ubuntu-22.04'
         run: |
