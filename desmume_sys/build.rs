@@ -137,6 +137,9 @@ fn main() {
         cmd.arg("build")
             .arg("--default-library=static")
             .arg("-Dbuildtype=release")
+            // Prevent implicit-function-declaration and int-conversion errors
+            .arg("-Dc_std=gnu11")
+            .arg("-Dcpp_std=gnu++14")
             .current_dir(build_dir.join("src/frontend/interface"));
         run(&mut cmd, "meson");
 
